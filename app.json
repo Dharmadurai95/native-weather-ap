@@ -1,7 +1,21 @@
 {
   "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "ef45ae89-5481-4836-9828-4ba48304f0e2"
+      }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      "expo-font"
+    ],
     "name": "explore",
-    "slug": "explore",
+    "slug": "weather-finder",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,13 +29,26 @@
       "supportsTablet": true
     },
     "android": {
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.dharmadurai_muthusamy.weatherfinder"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "owner": "dharmadurai_muthusamy",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ef45ae89-5481-4836-9828-4ba48304f0e2"
     }
   }
 }
